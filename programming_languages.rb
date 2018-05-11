@@ -15,10 +15,10 @@ def reformat_languages(languages)
     elsif val == {:type => "interpreted"}
       new_hash[lang][:style] = [:oo]
     end
-    if val == {:type => "compiled"}
-      new_hash[lang][:style] = [:functional]
-    elsif lang == :java
+    if lang == :java && val == {:type => "compiled"}
       new_hash[lang][:style] = [:oo]
+    elsif val == {:type => "compiled"}
+      new_hash[lang][:style] = [:functional]
     end
   end
   #binding.pry
