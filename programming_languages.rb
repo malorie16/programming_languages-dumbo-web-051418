@@ -22,7 +22,7 @@ def reformat_languages(languages)
   end
 
 
-  binding.pry
+  #binding.pry
     languages[:oo].delete_if {|lang, val| languages[:oo][lang]}
     languages[:functional].delete_if {|lang, val| languages[:functional][lang]}
     if new_hash.key({:type => "interpreted"}) == :python
