@@ -14,7 +14,8 @@ def reformat_languages(languages)
       new_hash[lang][:style] = [:oo]
     elsif lang == :javascript
       new_hash[lang][:style] = [:oo, :functional]
-    elsif val == {:type => "compiled"}
+    end
+    if val == {:type => "compiled"}
       new_hash[lang][:style] = [:functional]
     elsif lang == :java
       new_hash[lang][:style] = [:oo]
