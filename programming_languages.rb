@@ -18,16 +18,6 @@ def reformat_languages(languages)
       new_hash[lang][:style] = [:functional]
     elsif lang == :java
       new_hash[lang][:style] = [:oo]
+    end
   end
-  end
-
-  # 
-  # binding.pry
-  #   languages[:oo].delete_if {|lang, val| languages[:oo][lang]}
-  #   languages[:functional].delete_if {|lang, val| languages[:functional][lang]}
-  #   if new_hash.key({:type => "interpreted"}) == :python
-  #      new_hash.each do |key, val|
-  #        val[:style] = [:oo]
-  #      end
-  #    end
 end
